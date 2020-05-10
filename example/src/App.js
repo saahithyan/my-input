@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MyInput from 'myinput'
+import MyInput from 'my-input-react'
 
 class App extends Component {
     state = {
