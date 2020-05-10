@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react'
+import MyInput from 'my-input'
 
-import { ExampleComponent } from 'my-input'
-import 'my-input/dist/index.css'
+class App extends Component {
+    state = {
+        value: '' // initial value
+    }
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+    handleInput (refer, value) {
+        this.setState({ value })
+    }
+
+    render () {
+        const { value } = this.state
+
+        return (
+            <MyInput
+                refer='myInput'
+                placeHolder='Enter something'
+                value={value}
+                handler={this.handleInput.bind(this)}/>
+        )
+    }
 }
 
 export default App

@@ -1,7 +1,7 @@
 {
   "name": "my-input",
-  "version": "1.0.0",
-  "description": "A input component for react",
+  "version": "0.1.0",
+  "description": "An input component for react",
   "author": "saahithyan",
   "license": "MIT",
   "repository": "saahithyan/my-input",

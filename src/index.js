@@ -1,6 +1,15 @@
 import React from 'react'
-import styles from './styles.module.css'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+const MyInput = ({ placeHolder, value, handler, refer }) => {
+    const handleInput = event => handler(refer, event.target.value)
+
+    return (
+        <input
+            placeholder={placeHolder}
+            value={value}
+            onChange={handleInput}
+        />
+    )
 }
+
+export default MyInput
