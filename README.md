@@ -14,15 +14,32 @@ npm install --save my-input
 
 ```jsx
 import React, { Component } from 'react'
+import MyInput from 'my-input-react'
 
-import MyComponent from 'my-input'
-import 'my-input/dist/index.css'
+class App extends Component {
+    state = {
+        value: '' // initial value
+    }
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+    handleInput (refer, value) {
+        this.setState({ value })
+    }
+
+    render () {
+        const { value } = this.state
+
+        return (
+            <MyInput
+                value={value}
+                refer='myInput'
+                placeHolder='Enter something'
+                handler={this.handleInput.bind(this)}/>
+        )
+    }
 }
+
+export default App
+
 ```
 
 ## License
