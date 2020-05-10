@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MyInput from 'my-input'
+import MyInput from 'myinput'
 
 class App extends Component {
     state = {
@@ -15,9 +15,9 @@ class App extends Component {
 
         return (
             <MyInput
+                value={value}
                 refer='myInput'
                 placeHolder='Enter something'
-                value={value}
                 handler={this.handleInput.bind(this)}/>
         )
     }
