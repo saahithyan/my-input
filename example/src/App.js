@@ -6,7 +6,7 @@ class App extends Component {
         value: '' // initial value
     }
 
-    handleInput (refer, value) {
+    handleInput (me, value) {
         this.setState({ value })
     }
 
@@ -16,8 +16,9 @@ class App extends Component {
         return (
             <MyInput
                 value={value}
-                refer='myInput'
+                me='myInput'
                 placeHolder='Enter something'
+                className=''
                 handler={this.handleInput.bind(this)}/>
         )
     }
