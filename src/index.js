@@ -1,14 +1,15 @@
 import React from 'react'
 
-const MyInput = ({ placeHolder, value, handler, me, className }) => {
+const MyInput = ({ placeHolder, value, handler, me, className, type }) => {
     const handleInput = event => handler(me, event.target.value)
 
     return (
         <input
-            placeholder={placeHolder}
+            type={type}
             value={value}
-            onChange={handleInput}
             className={className}
+            onChange={handleInput}
+            placeholder={placeHolder}
         />
     )
 }
