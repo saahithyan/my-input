@@ -1,7 +1,11 @@
 import React from 'react'
 
-const MyInput = ({ placeHolder, value, handler, me, className, type }) => {
+const MyInput = ({
+    placeHolder, value, handler, me, className, type, onKeyPress
+}) => {
     const handleInput = event => handler(me, event.target.value)
+
+    const handleKeyPress = event => onKeyPress(event.key)
 
     return (
         <input
@@ -10,6 +14,7 @@ const MyInput = ({ placeHolder, value, handler, me, className, type }) => {
             className={className}
             onChange={handleInput}
             placeholder={placeHolder}
+            onKeyPress={handleKeyPress}
         />
     )
 }
